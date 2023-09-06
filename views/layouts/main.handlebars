@@ -26,10 +26,24 @@
   </head>
 
   <body>
-    {{> nav}}
-    <main>
-      {{{body}}}
-    </main>
+    <div>
+      <header class="display-flex justify-space-between align-center p-2">
+        <nav>
+          <a href="/home">Home</a>
+          {{#if logged_in}}
+          <a href="/dashboard">dashboard</a>
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
+        </nav>
+        <h1>
+          Tech Blog
+        </h1>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+    </div>
   </body>
-
 </html>
