@@ -1,8 +1,3 @@
-const { use } = require("../../controllers");
-
-const login = document.querySelector(/*Insert login element ID*/);
-const signUp = document.querySelector(/*Insert login element ID*/);
-
 const userLogin = async (event) => {
     event.preventDefault();
     const username = document.querySelector(/*Insert username login element ID*/).value.trim();
@@ -41,3 +36,10 @@ const userSignUp = async (event) => {
         }
     }
 };
+
+document
+        .querySelector(".login")
+        .addEventListener('submit', userLogin);
+document
+        .querySelector(".sign-up")
+        .addEventListener('submit', userSignUp);
