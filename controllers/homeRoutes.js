@@ -83,5 +83,5 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
       console.error(err);
     }
-
   });
+  module.exports = router;
