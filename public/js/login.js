@@ -1,7 +1,7 @@
 const userLogin = async (event) => {
     event.preventDefault();
-    const username = document.querySelector(/*Insert username login element ID*/).value.trim();
-    const password = document.querySelector(/*Insert password login element ID*/).value.trim();
+    const username = document.querySelector('#username_login').value.trim();
+    const password = document.querySelector('#password_login').value.trim();
 
     if (username && password) {
         const response = await fetch('/api/users/login', {
@@ -20,8 +20,8 @@ const userLogin = async (event) => {
 
 const userSignUp = async (event) => {
     event.preventDefault();
-    const username = document.querySelector(/*Insert username sign up element ID*/).value.trim();
-    const password = document.querySelector(/*Insert password sign up element ID*/).value.trim();
+    const username = document.querySelector('#username_signup').value.trim();
+    const password = document.querySelector('#password_signup').value.trim();
 
     if (username && password) {
         const response = await fetch('/api/users', {

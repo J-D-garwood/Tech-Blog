@@ -9,6 +9,7 @@ const userLogout = async () => {
     } else {
         alert(response.statusText);
     }
-
-    document.querySelector(/*Insert logout button element ID*/).addEventListener('click', userLogout);
+}
+if (document.querySelector('#logout')) {
+    document.querySelector('#logout').addEventListener('click', userLogout);
 }
