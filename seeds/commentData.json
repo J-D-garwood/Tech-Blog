@@ -1,0 +1,18 @@
+[
+    {
+        "comment": "This is a pretty good post",
+        "userId": 1,
+        "postId": 1
+    },
+    {
+        "comment": "I disagree, I think this post is dogshit",
+        "userId": 2,
+        "postId": 1
+    },
+    {
+        "comment": "seconded",
+        "userId": 3,
+        "postId": 1
+    }
+
+]
