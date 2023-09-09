@@ -3,6 +3,7 @@
 <p>
     {{post.contents}}
 </p>
+<h2>COMMENTS</h2>
 {{#each post.comments as |comment|}}
     <h5>{{comment.user.username}}</h5>
     <h6>{{comment.dateCreated}}</h6>

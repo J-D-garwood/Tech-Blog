@@ -56,7 +56,7 @@ router.get('/', async (req, res) => {
 
       res.render('post', {
         post,
-        logged_in: req.sessionStore.logged_in,
+        logged_in: req.session.logged_in,
       });
       //MORE TO GO HERE
     } catch (err) {
@@ -91,6 +91,21 @@ router.get('/', async (req, res) => {
       return;
     }
     res.render('login');
+  });
+
+  router.get('/post', withAuth, async (req, res) => {
+    try {
+      res.render('makepost', {
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
+  
+  router.get('*', (req, res) => {
+    res.status(404).render('404');
   });
 
   module.exports = router;
