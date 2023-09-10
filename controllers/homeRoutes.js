@@ -53,9 +53,13 @@ router.get('/', async (req, res) => {
         return res.status(404).render('404');
       }
       const post = specPostData.get({ plain: true });
-
+      let isAuthored = false
+      if (post.userId==req.session.userId) {
+        isAuthored = true;
+      }
       res.render('post', {
         post,
+        isAuthored,
         logged_in: req.session.logged_in,
       });
       //MORE TO GO HERE

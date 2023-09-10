@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
-const Post = require('../../models/Post');
+const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
@@ -32,6 +31,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const updatePostData = await Post.update(
