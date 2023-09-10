@@ -26,6 +26,30 @@
   </head>
 
   <body>
+    <header class="container-fluid">
+      <div class="row text-center" id="nav-bar">
+        <div class="col-3 col-md-2 col-lg-1 my-auto" id="nav-link"><a href="/">Home</a></div>
+        {{#if logged_in}}
+        <div class="col-3 col-md-2 col-lg-1 my-auto" id="nav-link"><a href="/dashboard">Dashboard</a></div>
+        <div class="col-3 col-md-2 col-lg-1 my-auto" id="nav-link">
+          <button id="logout">Logout</button>
+        </div>
+        {{else}}
+        <div class="col-3 col-md-2 col-lg-1 my-auto" id="nav-link"><a href='/login'>Login</a></div>
+        {{/if}}
+        <div class="col"></div>
+      </div>
+      <div class="row text-center" id="page-header">
+        <div class="col-6 col-md-5 col-lg-4 my-auto">
+          <h1 id="page-header-text">Tech Blog</h1>
+        </div>
+        <div class="col"></div>
+      </div>
+    </header>
+    <main>
+      {{{body}}}
+    </main>
+    <!--
     <div>
       <header>
         <nav>
@@ -44,7 +68,7 @@
       <main>
         {{{body}}}
       </main>
-    </div>
+    </div>-->
   </body>
 </html>
 <script src='/js/logout.js'></script>

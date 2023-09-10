@@ -1,0 +1,30 @@
+/** {
+    border: 1px solid red;
+}*/
+a {
+    text-decoration: none;
+    color: rgb(209, 255, 141);
+}
+#nav-bar {
+    background-color: black;
+    color: rgb(209, 255, 141);
+    height: 65px;
+}
+
+#page-header {
+    background-color: black;
+    color: rgb(209, 255, 141);
+    height: 65px;
+}
+
+#homepage {
+    background-color: rgb(209, 255, 141);
+    color: black;
+}
+
+#feed-posts {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+/*#nav-link {
+}
