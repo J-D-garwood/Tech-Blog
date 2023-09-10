@@ -12,10 +12,25 @@ const deletePost = async (event) => {
       }
     }
   }
-
+if (document.querySelector('.delete_post')) {
   document
   .querySelector('.delete_post')
   .addEventListener('click', deletePost);
+}
+
+const updatePost = async (event) => {
+  console.log("working")
+  event.preventDefault();
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+    window.location.replace(`/updatepost/${id}`);
+  }
+};
+if (document.querySelector('.update_post')) {
+  document
+    .querySelector('.update_post')
+    .addEventListener('click', updatePost);
+}
 
 const newComment = async (event) => {
     event.preventDefault();

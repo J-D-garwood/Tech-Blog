@@ -107,6 +107,23 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+  router.get('/updatepost/:id', withAuth, async (req, res) => {
+    try {
+      const postData = await Post.findByPk(req.params.id)
+      if(!postData) {
+        return res.status(404).render('404');
+      } 
+      const post = postData.get({ plain: true });
+      res.render('updatepost', {
+        post,
+        logged_in: req.session.logged_in,
+      });
+    } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+    }
+  });
   
   router.get('*', (req, res) => {
     res.status(404).render('404');
