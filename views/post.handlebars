@@ -50,6 +50,7 @@
             </div>
         </div>
     </div>
+    {{#if logged_in}}
     <div class="row justify-content-center">
         <div class="col-12 col-md-11">
             <form>
@@ -76,6 +77,8 @@
             </form>
         </div>
     </div>
+    {{/if}}
+    <div class="row" id="rest-of-page"></div>
 </div>
 <script src='/js/postPage.js'></script>
 <!--<h1>{{post.title}}</h1>

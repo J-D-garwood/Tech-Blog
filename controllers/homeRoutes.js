@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
     }
   });
 
-  router.get('/post/:id', withAuth, async (req, res) => {
+  router.get('/post/:id', async (req, res) => {
     try {
       if (isNaN(req.params.id)) {
         return res.status(404).render('404');
