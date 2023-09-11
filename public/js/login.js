@@ -23,12 +23,11 @@ const userSignUp = async (event) => {
     const password = document.querySelector('#password_signup').value.trim();
 
     if (username && password) {
-        console.log(username)
-        console.log(password)
+        console.log(JSON.stringify({ username, password }))
         const response = await fetch('/api/users', {
             method: 'POST',
             body: JSON.stringify({ username, password }),
-            header: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json' },
         });
 
         if (response.ok) {
