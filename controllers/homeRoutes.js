@@ -97,6 +97,15 @@ router.get('/', async (req, res) => {
     res.render('login');
   });
 
+  router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+      res.redirect('/dashboard');
+      return;
+    }
+    res.render('signup');
+  });
+  
+
   router.get('/post', withAuth, async (req, res) => {
     try {
       res.render('makepost', {

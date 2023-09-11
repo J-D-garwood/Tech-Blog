@@ -56,5 +56,5 @@ const newComment = async (event) => {
     }
 };
 document
-    .querySelector('.comment-form')
-    .addEventListener('submit', newComment);
+    .querySelector('#submit-comment')
+    .addEventListener('click', newComment);
