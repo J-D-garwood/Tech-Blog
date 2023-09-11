@@ -82,34 +82,3 @@
     <div class="row" id="rest-of-page"></div>
 </div>
 <script src='/js/postPage.js'></script>
-<!--<h1>{{post.title}}</h1>
-<h6>Posted by {{post.user.username}} on {{post.dateCreated}}</h6>
-<p>
-    {{post.contents}}
-</p>
-{{#if isAuthored}}
-<button class="update_post" data-id='{{post.id}}'>UPDATE</button>
-<button class="delete_post" data-id='{{post.id}}'>DELETE</button>
-{{/if}}
-<h2>COMMENTS</h2>
-{{#each post.comments as |comment|}}
-    <h5>{{comment.user.username}}</h5>
-    <h6>{{comment.dateCreated}}</h6>
-    {{comment.comment}}
-{{/each}}
-<div>
-
-    <form class="comment-form">
-        <div>
-            <input
-                id="comment-content"
-            />
-        </div>
-        <div>
-            <button 
-                id='submit-comment'
-            >Save</button>
-        </div>
-    </form>
-</div>
-<script src='/js/postPage.js'></script>
