@@ -6,7 +6,7 @@ const deletePost = async (event) => {
         method: 'DELETE',
       });
       if (response.ok) {
-        window.location.replace('/dashboard');
+        window.location.replace('/login');
       } else {
         alert('Failed to delete post');
       }

@@ -5,7 +5,7 @@
         "postId": 1
     },
     {
-        "comment": "I disagree, I think this post is dogshit",
+        "comment": "I disagree, I think this post is sucks",
         "userId": 2,
         "postId": 1
     },
@@ -13,6 +13,21 @@
         "comment": "seconded",
         "userId": 3,
         "postId": 1
+    },
+    {
+        "comment": "This post is ok",
+        "userId": 1,
+        "postId": 2
+    },
+    {
+        "comment": "Amen to that my brother",
+        "userId": 1,
+        "postId": 3
+    },
+    {
+        "comment": "I too love this company",
+        "userId": 3,
+        "postId": 4
     }
 
 ]
