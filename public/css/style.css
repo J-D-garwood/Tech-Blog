@@ -185,9 +185,10 @@ p {
 }
 
 .delete_post:hover {
-    background-color: var(--bg-colour);
-    color: black;
-    border:1px solid blackS
+    background-color: red;
+
+    color: yellow;
+    border:1px solid yellow;
 }
 
 #content_sec {
