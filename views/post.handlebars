@@ -18,6 +18,16 @@
             </div>
         </div>
     </div>
+    {{#if isAuthored}}
+    <div class="row justify-content-center" id="optional-btns">
+        <div class="col-3 col-md-2 col-lg-1" id="update_hold">
+            <button class="update_post" data-id='{{post.id}}'>UPDATE</button>
+        </div>
+        <div class="col-3 col-md-2 col-lg-1">
+            <button class="delete_post" data-id='{{post.id}}'>DELETE</button>
+        </div>
+    </div>
+    {{/if}}
     <div class="row justify-content-center">
         <div class="col-12 col-md-11">
             <div class="card" id="post-comments">

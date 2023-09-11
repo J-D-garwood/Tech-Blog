@@ -1,4 +1,35 @@
-<div id="main_container">
+<div class="container-fluid" id="dashboard">
+    {{#each authoredPosts as |post|}}
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-11">
+            <a
+            href='/post/{{post.id}}'
+            >
+                <div class="card" id="feed-posts">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-12 my-auto">
+                                <h2>{{post.title}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">{{post.contents}}</p>
+                    </div>
+                </div>
+            </a>
+            </div>
+        </div>
+        {{/each}}
+        <div class='row justify-content-center'>
+            <div class="col-12 col-md-9 col-lg-6" id="new-post-btn-hold">
+                <button id="add_new_post_button">Make New Post</button>
+            </div>
+        </div>
+        <div class="row" id="rest-of-page"></div>
+</div>
+<script src='/js/dashboard.js'></script>
+<!--<div id="main_container">
     <div id="my_posts">
         {{#each authoredPosts as |post|}}
             <div>

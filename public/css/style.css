@@ -89,7 +89,6 @@ p {
     border:1px solid black
 }
 #login-btn:hover {
-    width: 80px;
     background-color: var(--bg-colour);
     color: black;
     border:1px solid black
@@ -103,5 +102,101 @@ p {
 #LS-links:hover {
     text-decoration: underline;
 }
+
+#dashboard {
+    background-color: var(--bg-colour);
+}
+
+#new-post-btn-hold {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#add_new_post_button {
+    font-size: large;
+    width: 140px;
+    border-radius:5px;
+    background-color: black;
+    color: var(--bg-colour);
+    border:1px solid black
+}
+#add_new_post_button:hover {
+    background-color: var(--bg-colour);
+    color: black;
+    border:1px solid black
+}
+#rest-of-page {
+    background-color: var(--bg-colour);
+    height: 100%
+}
+
+#optional-btns {
+    margin-top: 15px;
+}
+
+#update_hold {
+    text-align: right;
+}
+.update_post {
+    border-radius:5px;
+    width: 80px;
+    background-color: black;
+    color: var(--bg-colour);
+    border:1px solid black
+}
+.update_post:hover {
+    background-color: var(--bg-colour);
+    color: black;
+    border:1px solid blackS
+}
+
+.delete_post {
+    border-radius:5px;
+    width: 80px;
+    background-color: black;
+    color: var(--bg-colour);
+    border:1px solid black
+}
+
+.delete_post:hover {
+    background-color: var(--bg-colour);
+    color: black;
+    border:1px solid blackS
+}
+
+#content_sec {
+    margin-top: 5px;
+}
+
+#post-btn-hold {
+    margin-top: 10px;
+}
+
+.post {
+    border-radius:5px;
+    width: 150px;
+    background-color: black;
+    color: var(--bg-colour);
+    border:1px solid black
+}
+.post:hover {
+    background-color: var(--bg-colour);
+    color: black;
+    border:1px solid blackS
+}
+
+.update {
+    border-radius:5px;
+    width: 150px;
+    background-color: black;
+    color: var(--bg-colour);
+    border:1px solid black
+}
+.update:hover {
+    background-color: var(--bg-colour);
+    color: black;
+    border:1px solid blackS
+}
+
 /*#nav-link {
 }

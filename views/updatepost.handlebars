@@ -1,4 +1,38 @@
-<div id='div-content' class='container main-margin'>
+<div class="container-fluid" id="update-post-page">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-11">
+      <div class="card" id="add-post-card">
+        <div class="card-header">
+          <div class="row">
+              <div class="col-6 col-sm-7 col-lg-8">
+                      <h2>Update post</h2>
+              </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class='form-group'>
+          <label for='title'>Title</label>
+          <div class="row">
+          <input type='textArea' name='title' id='title_area' value="{{post.title}}"/>
+          </div>
+          </div>
+          <div class='form-group' id="content_sec">
+            <label for='content'>Content</label>
+            <div class="row">
+            <input type='textArea' name='content' id='content_area' value="{{post.contents}}"/>
+            </div>
+          </div>
+          <div class="row justify-content-center" id="post-btn-hold">
+            <button class="update" data-id="{{post.id}}">UPDATE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='/js/updatepost.js'></script>
+
+<!--<div id='div-content' class='container main-margin'>
   <div class='row justify-content-evenly'>
       <div class='form-group'>
         <label for='title'>Title</label>
