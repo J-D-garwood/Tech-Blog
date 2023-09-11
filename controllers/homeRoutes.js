@@ -3,6 +3,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const sequelize = require('../config/connection');
 
+//display homepage w/ post feed
 router.get('/', async (req, res) => {
     try {
       const postData = await Post.findAll({
@@ -26,6 +27,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  //display a specific post by id
   router.get('/post/:id', async (req, res) => {
     try {
       if (isNaN(req.params.id)) {
@@ -62,13 +64,13 @@ router.get('/', async (req, res) => {
         isAuthored,
         logged_in: req.session.logged_in,
       });
-      //MORE TO GO HERE
     } catch (err) {
       console.log(err);
       return res.status(500).render('500');
     }
   })
 
+//display user dashboard
   router.get('/dashboard', withAuth, async (req, res) => {
     try {
       const postData = await Post.findAll({
@@ -89,6 +91,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  //display login page
   router.get('/login', (req, res) => {
     if (req.session.logged_in) {
       res.redirect('/dashboard');
@@ -97,6 +100,7 @@ router.get('/', async (req, res) => {
     res.render('login');
   });
 
+  //display signup page
   router.get('/signup', (req, res) => {
     if (req.session.logged_in) {
       res.redirect('/dashboard');
@@ -105,7 +109,7 @@ router.get('/', async (req, res) => {
     res.render('signup');
   });
   
-
+  //dispay make post page
   router.get('/post', withAuth, async (req, res) => {
     try {
       res.render('makepost', {
@@ -117,6 +121,7 @@ router.get('/', async (req, res) => {
     }
   });
 
+  //display update post page
   router.get('/updatepost/:id', withAuth, async (req, res) => {
     try {
       const postData = await Post.findByPk(req.params.id)
@@ -134,6 +139,7 @@ router.get('/', async (req, res) => {
     }
   });
   
+  //display 404 if page not found
   router.get('*', (req, res) => {
     res.status(404).render('404');
   });

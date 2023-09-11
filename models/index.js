@@ -2,6 +2,8 @@ const User = require('./User')
 const Post = require('./Post');
 const Comment = require('./Comment');
 
+//indexing tables
+
 Post.belongsTo(User, {
     foreignKey: 'userId',
     onDelete: 'CASCADE',

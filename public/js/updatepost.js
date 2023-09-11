@@ -1,3 +1,4 @@
+// update post PUT request
 const updatePost = async (event) => {
     event.preventDefault();
     const id = event.target.getAttribute('data-id');

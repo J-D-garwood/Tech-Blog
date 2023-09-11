@@ -1,3 +1,4 @@
+//delete post DELETE request
 const deletePost = async (event) => {
     window.location.replace('/dashboard');  
     if (event.target.hasAttribute('data-id')) {
@@ -18,6 +19,7 @@ if (document.querySelector('.delete_post')) {
   .addEventListener('click', deletePost);
 }
 
+//update post link to update post page
 const updatePost = async (event) => {
   console.log("working")
   event.preventDefault();
@@ -32,6 +34,7 @@ if (document.querySelector('.update_post')) {
     .addEventListener('click', updatePost);
 }
 
+//post comment POST request
 const newComment = async (event) => {
     event.preventDefault();
 

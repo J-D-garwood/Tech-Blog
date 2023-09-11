@@ -1,3 +1,4 @@
+//login post request
 const userLogin = async (event) => {
     event.preventDefault();
     const username = document.querySelector('#username_login').value.trim();
@@ -17,6 +18,7 @@ const userLogin = async (event) => {
     }
 };
 
+//signup post request
 const userSignUp = async (event) => {
     event.preventDefault();
     const username = document.querySelector('#username_signup').value.trim();

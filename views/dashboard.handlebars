@@ -1,3 +1,4 @@
+<!-- dashboard display -->
 <div class="container-fluid" id="dashboard">
     {{#each authoredPosts as |post|}}
         <div class="row justify-content-center">
@@ -28,32 +29,4 @@
         </div>
         <div class="row" id="rest-of-page"></div>
 </div>
-<script src='/js/dashboard.js'></script>
-<!--<div id="main_container">
-    <div id="my_posts">
-        {{#each authoredPosts as |post|}}
-            <div>
-                <a
-                href='/post/{{post.id}}'
-                >
-                    <div>
-                            <div>
-                                <div>
-                                    <h3>{{post.title}}</h3>
-                                    <p>{{post.contents}}</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        {{/each}}
-    </div>
-    <div id="add_new_post">
-        <button 
-            id="add_new_post_button"
-        >Make New Post</button>
-    </div>
-</div>
-
 <script src='/js/dashboard.js'></script>
